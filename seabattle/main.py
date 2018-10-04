@@ -61,5 +61,5 @@ for i in field.size:
 # Enter coordinates ship
 print(player1.name, '\nEnter coordinates ship (1 cell)')
 player1_coo_one = input('X = ')
-player1_coo_one = input('Y = ')
+player2_coo_two = input('Y = ')
 
