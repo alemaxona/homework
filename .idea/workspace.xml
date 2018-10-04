@@ -2,8 +2,7 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="4f19eeb7-a82b-4f3f-97bb-09934c0627fb" name="Default Changelist" comment="Change directory">
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/seabattle/main.py" beforeDir="false" afterPath="$PROJECT_DIR$/seabattle/main.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/todo - копия.iml" beforeDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -47,6 +46,7 @@
     <session id="-830420390">
       <usages-collector id="statistics.lifecycle.project">
         <counts>
+          <entry key="project.closed" value="1" />
           <entry key="project.open.time.0" value="1" />
           <entry key="project.opened" value="1" />
         </counts>
@@ -83,7 +83,7 @@
         <entry file="file://$PROJECT_DIR$/seabattle/main.py">
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="930">
-              <caret line="62" column="31" lean-forward="true" selection-start-line="62" selection-start-column="31" selection-end-line="62" selection-end-column="31" />
+              <caret line="62" column="31" selection-start-line="62" selection-start-column="31" selection-end-line="62" selection-end-column="31" />
             </state>
           </provider>
         </entry>
@@ -111,7 +111,7 @@
       </list>
     </option>
   </component>
-  <component name="ProjectFrameBounds">
+  <component name="ProjectFrameBounds" extendedState="6">
     <option name="x" value="307" />
     <option name="width" value="1098" />
     <option name="height" value="900" />
@@ -179,7 +179,7 @@
   </component>
   <component name="RunManager" selected="Python.models">
     <configuration name="main" type="PythonConfigurationType" factoryName="Python" temporary="true">
-      <module name="todo - копия" />
+      <module name="homework" />
       <option name="INTERPRETER_OPTIONS" value="" />
       <option name="PARENT_ENVS" value="true" />
       <envs>
@@ -200,7 +200,7 @@
       <method v="2" />
     </configuration>
     <configuration name="models" type="PythonConfigurationType" factoryName="Python" temporary="true">
-      <module name="todo - копия" />
+      <module name="homework" />
       <option name="INTERPRETER_OPTIONS" value="" />
       <option name="PARENT_ENVS" value="true" />
       <envs>
@@ -254,7 +254,6 @@
   </component>
   <component name="ToolWindowManager">
     <frame x="307" y="0" width="1098" height="900" extended-state="0" />
-    <editor active="true" />
     <layout>
       <window_info active="true" content_ui="combo" id="Project" order="0" visible="true" weight="0.29897866" />
       <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
@@ -295,7 +294,7 @@
     <entry file="file://$PROJECT_DIR$/seabattle/main.py">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="930">
-          <caret line="62" column="31" lean-forward="true" selection-start-line="62" selection-start-column="31" selection-end-line="62" selection-end-column="31" />
+          <caret line="62" column="31" selection-start-line="62" selection-start-column="31" selection-end-line="62" selection-end-column="31" />
         </state>
       </provider>
     </entry>
