@@ -6,21 +6,27 @@ __author__ = 'alemaxona'
 
 
 class Storage(object):
-    player = None
-    ship = []
-    shot = []
+    player1 = ''
+    ship_player1 = {}
+    shot_player1 = []
+    field_player1 = []
+    player2 = ''
 
     @staticmethod
-    def add_player(value):
-        Storage.player = value
+    def add_player1(value):
+        Storage.player1 = value
 
     @staticmethod
-    def add_ship(value):
-        Storage.ship.append(value)
+    def add_player2(value):
+        Storage.player2 = value
 
     @staticmethod
-    def add_shot(value):
-        Storage.shot.append(value)
+    def add_ship_player1(key, value):
+        Storage.ship_player1[key] = value
+
+    @staticmethod
+    def add_shot_player1(value):
+        Storage.shot_player1.append(value)
 
 
 class Gamer(object):
@@ -31,7 +37,12 @@ class Gamer(object):
 
     def __init__(self, name):
         self.name = name
-        Gamer.queue += 1
+        if Gamer.queue > 0:
+            Storage.add_player2(name)
+            Gamer.queue += 1
+        else:
+            Storage.add_player1(name)
+            Gamer.queue += 1
 
 
 class Field(object):
@@ -49,8 +60,12 @@ class Field(object):
 
 
 class Ship(object):
-    def __init__(self, size):
+    def __init__(self, size, key):
         self.size = size
+        self.key = key
+
+    def init_ship(self):
+        Storage.add_ship_player1(self.key, self.size)
 
 
 class Shot(object):
@@ -68,3 +83,9 @@ print(s.shot)
 s1 = Storage
 print(s1.shot)
 '''
+
+a = [[0,0,0],[0,0,0],[0,0,0]]
+Storage.field_player1 = a.copy()
+print(Storage.field_player1)
+Storage.field_player1[0][0] = 'X'
+print(Storage.field_player1)
