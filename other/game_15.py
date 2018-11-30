@@ -21,7 +21,6 @@ while True:
                 field[position_cell[0] - 1][position_cell[1]] = '[]'
                 return [position_cell[0] - 1, position_cell[1]]
             else:
-                print('You have gone beyond the field. Repeat input.\n')
                 return [position_cell[0], position_cell[1]]
         elif user_value == 's':
             if position_cell[0] >= 0:
@@ -29,7 +28,6 @@ while True:
                 field[position_cell[0] + 1][position_cell[1]] = '[]'
                 return [position_cell[0] + 1, position_cell[1]]
             else:
-                print('You have gone beyond the field. Repeat input.\n')
                 return [position_cell[0], position_cell[1]]
         elif user_value == 'a':
             if position_cell[1] >= 1:
@@ -37,7 +35,6 @@ while True:
                 field[position_cell[0]][position_cell[1] - 1] = '[]'
                 return [position_cell[0], position_cell[1] - 1]
             else:
-                print('You have gone beyond the field. Repeat input.\n')
                 return [position_cell[0], position_cell[1]]
         else:
             if position_cell[1] >= 0:
@@ -45,7 +42,6 @@ while True:
                 field[position_cell[0]][position_cell[1] + 1] = '[]'
                 return [position_cell[0], position_cell[1] + 1]
             else:
-                print('You have gone beyond the field. Repeat input.\n')
                 return [position_cell[0], position_cell[1]]
 
 
@@ -75,7 +71,7 @@ while True:
             else:
                 position_cell = move_position_cell(user_input)
         except IndexError:
-            print('You have gone beyond the field. Repeat input.\n')
+            continue
         except KeyboardInterrupt:
             print('Ok, bye!')
             break
