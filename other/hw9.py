@@ -9,6 +9,7 @@ __author__ = 'alemaxona'
 '''
 
 # Go to https://pythex.org/
+
 # Date (22/Jun/2017)
 # (\d.{1}.\w.{3}.\d.{2})
 
@@ -20,8 +21,6 @@ __author__ = 'alemaxona'
 
 
 '''
-Задачи
-
 + Реализовать две функции: write_to_file(data) и read_file_data().
 Которые соотвественно: пишут данные в файл и читают данные из файла.
 
@@ -42,6 +41,35 @@ file = '/Users/alemaxona/Documents/Projects/homework/my_file_test'
 
 print(write_to_file(file))
 print(read_file_data(file))
+
+
+'''
++ Обратиться с странице https://habrahabr.ru/. Получить текст страницы.
+При помощи регулярных выражений нужно получить все ссылки со страницы на другие.
+Ответить себе на вопрос удобно ли так делать?
+'''
+
+
+import re
+import requests
+
+
+def get_from_site(site: str):
+    r = requests.get(site)
+    return r.content
+
+
+def parsing_site(site: str):
+    pattern = r'(https://habr.com/[^\\].+?")'
+    pars = re.findall(pattern, site)
+    return pars
+
+
+get_content = str(get_from_site('https://habrahabr.ru/'))
+
+go_pars = parsing_site(get_content)
+for i in go_pars:
+    print(i)
 
 
 
