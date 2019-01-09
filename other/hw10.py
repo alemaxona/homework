@@ -63,9 +63,9 @@ def auth():
         return 'JSON world!'
 
 
-@app.route('/serve/<path:path>')
-def usr_path(path):
-    file = '/Users/alemaxona/Documents/Projects/venv/lern12flask/' + path
+@app.route('/serve/<path:filepath>')
+def usr_path(filepath):
+    file = '/Users/alemaxona/Documents/Projects/venv/lern12flask/' + filepath
     print(file)
     try:
         with open(file) as f:
