@@ -12,10 +12,6 @@ db = SQLAlchemy(app)
 
 @app.route('/', methods=['GET', 'POST'])
 def index():
-
-    from models import Book
-    from forms import PostForm
-
     if request.method == 'GET':
         if Book.query.count() == 0:
             return 'No data'
@@ -29,19 +25,29 @@ def index():
                 results.append([author, post, date])
             return str(results)
     else:
-        print(request.form)
+        return 'Enter Get request.'
+
+@app.route('/create', methods=['GET', 'POST'])
+def insert_db():
+
+    from models import Book
+    from forms import PostForm
+
+    if request.method == 'POST':
         form = PostForm(request.form)
         if form.validate():
-            post = Book(**form.data)
-            db.session.add(post)
-            db.session.commit()
-            return 'POST created!'
+                post = Book(**form.data)
+                db.session.add(post)
+                db.session.commit()
+                return 'POST created!'
         else:
-            return 'Form is not valid.'
+            return 'Form not valid.'  
+    else:
+        return 'Enter POST request.'
 
 
 if __name__ == "__main__":
     from models import *
 
-    db.create_all()  # Создаются все таблицы, если они есть, -  ничего не создается.
+    db.create_all()
     app.run()
